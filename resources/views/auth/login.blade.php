@@ -8,7 +8,7 @@
     <!-- Email Address -->
     <div>
       <x-input-label for="email" :value="__('Email')" />
-      <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+      <x-text-input id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
       <x-input-error :messages="$errors->get('email')" class="mt-2" />
     </div>
 
@@ -20,7 +20,7 @@
         <x-text-input id="password" class="block w-full pr-10" type="password" name="password" required autocomplete="current-password" />
 
         <!-- See Password Button -->
-        <button type="button" onclick="togglePasswordVisibility()" class="absolute right-0 top-1/2 transform -translate-y-1/2 pr-2 flex items-center focus:outline-none">
+        <button type="button" onclick="togglePasswordVisibility()" class="absolute right-0 flex items-center pr-2 transform -translate-y-1/2 top-1/2 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
@@ -35,22 +35,22 @@
     <!-- Remember Me -->
     <div class="block mt-4">
       <label for="remember_me" class="inline-flex items-center">
-        <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-        <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+        <input id="remember_me" type="checkbox" class="text-indigo-600 border-gray-300 rounded shadow-sm dark:bg-gray-900 dark:border-gray-700 focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
+        <span class="text-sm text-gray-600 ms-2 dark:text-gray-400">{{ __('Remember me') }}</span>
       </label>
     </div>
 
     <div class="flex items-center justify-end mt-4">
       <div class="flex flex-col">
         {{-- @if (Route::has('password.request'))
-        <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
+        <a class="text-sm text-gray-600 underline rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
         {{ __('Forgot your password?') }}
         </a>
         @endif --}}
-        {{-- <a href="{{route('loginadmin')}}" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Login Admin ?</a> --}}
-        <a href="{{ route('register') }}" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Register ?</a>
+        {{-- <a href="{{route('loginadmin')}}" class="text-sm text-gray-600 underline rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Login Admin ?</a> --}}
+        {{-- <a href="{{ route('register') }}" class="text-sm text-gray-600 underline rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Register ?</a> --}}
 
-        <a href="{{route('password.request')}}" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Lupa Password?</a>
+        <a href="{{route('password.request')}}" class="text-sm text-gray-600 underline rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Lupa Password?</a>
       </div>
 
 
