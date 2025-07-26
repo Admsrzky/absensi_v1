@@ -21,12 +21,5 @@ class UserSeeder extends Seeder
             'password' => Hash::make('123456'),
             'jabatan' => 'SUPERADMIN',
         ]);
-
-        DB::table('users')->insert([
-            'nama' => 'Karyawan Office',
-            'email' => 'adimasrizki926@gmail.com',
-            'password' => Hash::make('123456'),
-            'jabatan' => 'MANAJER AREA',
-        ]);
     }
 }
